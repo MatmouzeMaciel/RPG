@@ -1,33 +1,41 @@
 namespace RPG.src.Entities
 {
+    /**/
     public class Habilidade()
     {
         public Guid ID = Guid.NewGuid();
         public string NomeAtaque {get; set; } = "";
+        /*TipoDoHeroi é atribuido à Habilidade para que haja o pareamento das habilidades
+        entre as classes, e seja possível realizar verificação de que o objeto Jogador está chamando um objeto Habilidade compatível*/
+        //Por ser para fins educacionais, não foi levado à isto no projeto
         public TiposHeroi TipoDoHeroi {get; set; } 
         public int NivelHabilidade {get; set; } = 1;
         public int CustoMana {get; set; }
         public int Dano {get; set; }
   
     }
-
+    /*O objeto TiposHeroi serve como um alicerse de referenciamento entre os Objetos Habilidade e Jogador, podendo realizar esse cruzamento sem maiores problemas */
     public enum TiposHeroi{
         Guerreiro = 0, //0
         MagoBranco = 1, //1
         MagoNegro = 2, //2
         Ninja = 4 //4
     }
-    
+    /*Jogador é a abstração final/conveniente para este projeto logo que nela é gerada todos os parâmetros necessários para gerar o Objeto 
+    Jogador de forma que faça sentido na utilização dentro deste projeto*/
     public class Jogador()
     {
+        /*Foi setado para todo onjeto Jogador um ID para que mesmo que haja repetições entre od objetos, haja um dicernimento claro entre eles */
         public Guid IDJogador = Guid.NewGuid();
         public string Nome {get; set; } = "";
-        public int Level {get; set; } = 1;
+        public int Level {get; set; }
         public Heroi Classe {get; set; } = new Heroi();
 
 
     }
 
+    /*O Objeto heroi é herdado pelos objetos MagoBranco, MagoNegro, Guerreiro e Ninja, e é referenciada em Jogador para criar a 
+    Classe utilizada pelo Objeto Jogador*/
     public class Heroi()
     {
         public Guid IDHeroi = Guid.NewGuid();
@@ -39,6 +47,7 @@ namespace RPG.src.Entities
         public int AtaqueBase {get; set; }
         public int DefesaBase {get; set; }
         public List<Habilidade> Habilidades {get; set;} = new List<Habilidade>();
+        //O método Atacar é sobrescrito em cada classe utilizando valores/peculidades delas. 
         public virtual int Atacar(Heroi atacado, Habilidade habilidade){
             if(AtualMana < habilidade.CustoMana){
                 return 0;

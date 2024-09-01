@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\MAT\\OneDrive\\Projetos\\RPG\\RPG.csproj": {}
+    "c:\\Users\\MAT\\OneDrive\\ProjetosGit\\RPG\\RPG.csproj": {}
   },
   "projects": {
-    "c:\\Users\\MAT\\OneDrive\\Projetos\\RPG\\RPG.csproj": {
+    "c:\\Users\\MAT\\OneDrive\\ProjetosGit\\RPG\\RPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\MAT\\OneDrive\\Projetos\\RPG\\RPG.csproj",
+        "projectUniqueName": "c:\\Users\\MAT\\OneDrive\\ProjetosGit\\RPG\\RPG.csproj",
         "projectName": "RPG",
-        "projectPath": "c:\\Users\\MAT\\OneDrive\\Projetos\\RPG\\RPG.csproj",
+        "projectPath": "c:\\Users\\MAT\\OneDrive\\ProjetosGit\\RPG\\RPG.csproj",
         "packagesPath": "C:\\Users\\MAT\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\MAT\\OneDrive\\Projetos\\RPG\\obj\\",
+        "outputPath": "c:\\Users\\MAT\\OneDrive\\ProjetosGit\\RPG\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
